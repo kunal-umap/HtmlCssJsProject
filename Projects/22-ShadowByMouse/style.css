@@ -1,0 +1,49 @@
+body {
+  background: radial-gradient(yellow, yellowgreen),
+    linear-gradient(blue, yellow);
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 55px;
+  color: indigo;
+  min-width: 50%;
+}
+h1 {
+  transform: scale(0.75) rotateY(27deg) rotateX(29deg) translateZ(4.5rem);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: 0.6s ease transform;
+  
+}
+h1:hover {
+  transform: scale(1);
+}
+
+h1::before {
+  transform: translateZ(4rem);
+}
+h1::before:hover {
+  transform: translateZ(0);
+}
+
+h1::after {
+  transform: translateZ(-4rem);
+}
+h1::after:hover {
+  transform: translateZ(-1px);
+}

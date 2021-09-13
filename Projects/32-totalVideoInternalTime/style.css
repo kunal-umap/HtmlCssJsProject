@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    background-color: rgb(241, 241, 241);
+}
+li{
+    list-style: inside square;
+    padding: 8px;
+    margin: 4px;
+    border: 2px solid white;
+    cursor: pointer;
+    flex: 1;
+}
+.total {
+    margin: auto;
+    font-size: 30px;
+    font-weight: 800;
+}

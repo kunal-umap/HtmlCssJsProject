@@ -1,0 +1,221 @@
+html {
+  box-sizing: border-box;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.hue {
+  height: 93vh;
+  width: 100vw;
+  background: transparent;
+  background: url(./download.png);
+  position: fixed;
+  top: 0;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: col 20s infinite alternate;
+  z-index: -100;
+  overflow: hidden;
+}
+.navagationBar {
+  margin-top: 20px;
+  position: relative;
+  perspective: 600px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.navagationBar > ul > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  margin: 20px;
+}
+.navagationBar > ul:hover > a {
+  color: rgba(255, 255, 255, 0.527);
+}
+.navagationBar > ul {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.dropdown {
+  position: absolute;
+  overflow: hidden;
+  top: -20px;
+  transform: translateY(87px);
+  transition: all 0.5s;
+  border-radius: 4px;
+  padding: 20px;
+  opacity: 0;
+  will-change: opacity;
+  display: none;
+}
+.hover-on .dropdown {
+  display: block;
+}
+.hover-on-stable .dropdown {
+  opacity: 1;
+}
+
+.dropDownBackground {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+    0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+.dropDownBackground.open {
+  opacity: 1;
+}
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: white;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+
+.innerNavHeding {
+  font-weight: 700;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  font-size: 18px;
+}
+.product {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+.product > ul {
+  padding: 20px;
+}
+.product > ul > li {
+  list-style: none;
+  text-align: left;
+  padding-top: 25px;
+}
+.product > ul > li > a {
+  text-decoration: none;
+  font-weight: 550;
+  color: black;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 40px;
+  min-width: 210px;
+}
+.service > a {
+  text-decoration: none;
+  padding: 2px;
+  font-family: cursive;
+  font-size: 18px;
+}
+.about {
+  max-width: 300px;
+}
+.about > img {
+  max-width: 200px;
+  max-height: 149.7px;
+  float: left;
+  padding: 8px;
+}
+.about > a {
+  text-decoration: none;
+}
+.help .donate {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+.help .donate > a {
+  text-decoration: none;
+  color: gold;
+  font-size: 20px;
+}
+.help .donate > a:hover {
+  color: greenyellow;
+}
+.help .donate > span {
+  text-align: center;
+}
+a.button {
+  background: black;
+  display: block;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+.help .contact {
+  line-height: 30px;
+}
+.help .contact > span {
+  font-size: 30px;
+}
+.help .contact > ul {
+  padding: 0;
+}
+.help .contact > ul > li {
+  list-style: none;
+  width: 100%;
+}
+.help .contact > ul > li > a {
+  text-decoration: none;
+  color: #ffc600;
+}
+.button[href*="twitter"] {
+  background: #019fe9;
+}
+.button[href*="facebook"] {
+  background: #3b5998;
+}
+.button[href*="blog"] {
+  background: #ff104c;
+}
+.button[href*="twitter"]:hover {
+  background: #0191d3;
+  color: #fff;
+}
+.button[href*="facebook"]:hover {
+  background: #315297;
+  color: #fff;
+}
+.button[href*="blog"]:hover {
+  background: #e00038;
+  color: #fff;
+}
+
+@keyframes col {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}

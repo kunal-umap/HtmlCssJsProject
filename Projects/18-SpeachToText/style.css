@@ -1,0 +1,41 @@
+html {
+  font-size: 12px;
+}
+body {
+  background: tomato;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  font-size: 28px;
+}
+.speach {
+  max-width: 500px;
+  margin: 40px auto;
+  background: wheat;
+  border-radius: 8px;
+  box-shadow: 20px 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem 1rem 4rem;
+  background: -webkit-gradient(
+      linear,
+      0 0,
+      0 100%,
+      from(#a8abad),
+      color-stop(4%, #fff)
+    )
+    0 4px;
+  background-size: 100% 3rem;
+  position: relative;
+  line-height: 3rem;
+}
+p {
+  margin: 0 0 3rem;
+}
+.speach::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: 0;
+  left: 30px;
+  bottom: 0;
+  border: 1px solid;
+  border-color: transparent #cc9696;
+}

@@ -1,0 +1,46 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: yellow;
+}
+
+.inbox {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 2px black;
+}
+
+.item {
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    /* border-radius: 2px; */
+    
+}
+
+.item:last-child {
+    border-bottom: 0;
+}
+
+input:checked + p {
+    background: hotpink;
+    text-decoration: line-through;
+}
+
+input[type="checkbox"]{
+    margin: 18px;
+    margin-right: 24px;
+}
+
+p {
+    margin: 0;
+    padding: 20px;
+    transition: background 0.2s;
+    flex: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border-left: 1px solid gray;
+}

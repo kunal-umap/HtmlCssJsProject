@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="Container">
+        
+        <div class="timeOpt">
+            
+            <button data-time="30" class="SetTimeBtn">30 Secs</button>
+            <button data-time="120" class="SetTimeBtn">2 min question</button>
+            <button data-time="900" class="SetTimeBtn">15 min Quick</button>
+            <button data-time="1600" class="SetTimeBtn">30 min Break</button>
+            <button data-time="10800" class="SetTimeBtn">3 hr Work</button>
+            
+            <form name="customTime" id="custom" class="custom">
+                <input type="text" name="minutes" placeholder="Enter Minutes">
+            </form>
+        
+        </div>
+        
+        <div class="display">
+            
+            <h1 class="timerLeft">0:00</h1>
+            <p class="timerEndTime">Null</p>
+        
+        </div>
+    
+    </div>
+
+    <script src="java.js"></script>
+</body>
+
+</html>

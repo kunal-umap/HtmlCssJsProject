@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    background: linear-gradient(to right bottom,rgba(101, 101, 247, 0.671),blue);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    margin: 0;
+}
+.box {
+    width: 150px;
+    aspect-ratio: 1/1;
+    background: white;
+    border: 2px solid grey;
+    display: flex;
+}
+
+.pto{
+    background-image: url(./beautiful_lion_2-wallpaper-2560x1440.jpg);
+    background-size: cover;
+    flex: 1;
+    cursor: pointer;
+}
+
+.hoverimg{
+    border: dotted;
+    background: rgb(224, 224, 224);
+}
+
+.hold {
+    border: solid 4px white;
+};

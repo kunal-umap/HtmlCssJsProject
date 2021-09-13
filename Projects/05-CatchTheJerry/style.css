@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(255, 255, 46),
+    rgb(70, 255, 70),
+    rgb(32, 32, 255)
+  );
+  width: 100vw;
+  height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+}
+h1 {
+    text-align: center;
+    font-size: 8rem;
+    line-height: 1;
+    margin-bottom: 0;
+}
+.score {
+    background: rgba(255,255,255,0.2);
+    padding: 0 3rem;
+    line-height: 1;
+    border-radius: 1rem;
+}
+.display {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+}
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+.hole::after {
+    content: '';
+    display: block;
+    background: url("hole.png") bottom center no-repeat;
+    background-size: 100%;
+    width: 320px;
+    height:154.3px;
+    position: absolute;
+    z-index: 2;
+    bottom: -20px;
+}
+.catch {
+    background: url("jerry.png") bottom center no-repeat;
+    background-size: 53%;
+    position: absolute;
+    margin-left: 40px;
+    top: 57%;
+    width: 102%;
+    height: 95%;
+    transition:all 0.4s;
+    z-index: 4;
+    pointer-events: none;
+}
+.hole.up .catch {
+    pointer-events: all;
+    top: -92px;
+}

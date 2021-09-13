@@ -1,0 +1,72 @@
+html{
+    text-align: center;
+    font-size: 12px;
+    /* background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.924),orange,rgba(255, 255, 0, 0.877),rgba(0, 128, 0, 0.89),rgba(0, 0, 255, 0.884),rgba(76, 0, 130, 0.856),rgba(158, 6, 158, 0.849)); */
+    background-image: linear-gradient(to bottom right,rgb(0, 59, 0),rgb(138, 221, 138));
+    background-repeat: no-repeat;
+    background: cover;
+    /* background-size: 100vw 100vh; */
+}
+body{
+    
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+.clock {
+    width: 25rem;
+    height: 25rem;
+    border: 20px solid silver;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 3rem;
+    box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.493);
+}
+.clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+.hand{
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.82, 1.63, 0, -1.25);
+}
+.second-hand{
+    background-color: transparent;
+    border: 2px solid black;
+    height: 2px;
+    /* right: 50%; */
+}
+.min-hand{
+    border: 2px solid black;
+    height: 2px;
+    width: 45%;
+    right: 50%;
+}
+.hour-hand{
+    border: 4px solid black;
+    height: 2px;
+    width: 30%;
+    right: 50%;
+}
+.mid{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: silver;
+    position: absolute;
+    top: 48%;
+    right: 46%;
+    /* transform: translateX(-23px); */
+}

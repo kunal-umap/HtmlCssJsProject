@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: repeating-linear-gradient(to bottom right,skyblue,rgb(43, 43, 243));
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+    user-select: none;
+}
+.head {
+    position: absolute;
+    top: 0;
+}
+.container {
+    max-width: 850px;
+    display: flex;
+    margin: 10px;
+}
+
+video {
+    max-width: 90%;
+    
+}
+.speedControler {
+    background: white;
+    flex: 1;
+    max-width: 40px;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.377);
+    overflow: hidden;
+}
+.speedBar {
+    width: 100%;
+    background: linear-gradient(-170deg, #4cce19 0%, #9d25b3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    color: white;
+    height: 16.3%;
+}

@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom right,yellow,pink,grey,blue);
+    background-size: cover;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#list {
+    list-style: inside square;
+    font-size: 23px;
+    background:whitesmoke;
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+    box-shadow: 0 0 0 18px rgba(0, 0, 0, 0.2);
+}
+#list li {
+    border-bottom: 1px solid white;
+    padding: 12px;
+}
+#list li:last-child {
+    border-bottom: 0;
+}

@@ -1,0 +1,83 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    background-color: yellowgreen;
+    /* text-align: center; */
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+.btn {
+    width: 65px;
+    padding: 5px;
+    margin: 2px;
+    background-color: greenyellow;
+    border: 0;
+    scale: 0.95;
+}
+.btn:hover {
+    outline: 0;
+    font-weight: 600;
+    scale: 1;
+    background-color: rgb(138, 211, 29);
+}
+.photobooth {
+    background: lemonchiffon;
+    max-width: 105rem;
+    margin: 2rem auto;
+    border-radius: 3px;
+}
+.photobooth::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.photo {
+    width: 100%;
+    float: left;
+}
+.player {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+}
+.strip {
+    padding: 2rem;
+}
+.strip img {
+    width: 100px;
+    /* height: 100px; */
+    overflow-x: scroll;
+    padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    background: white;
+
+}
+.strip a:nth-child(5n+1) img { transform: rotate(10deg); }
+.strip a:nth-child(5n+2) img { transform: rotate(-2deg); }
+.strip a:nth-child(5n+3) img { transform: rotate(8deg); }
+.strip a:nth-child(5n+4) img { transform: rotate(-11deg); }
+.strip a:nth-child(5n+5) img { transform: rotate(12deg); }
+canvas {
+    /* background: url(./3d-wallpapers-hd-for-desktop-1.jpg); */
+    background-size: cover;
+}
+.clickPhoto {
+    padding: 4px;
+    margin: 8px;
+    width: 60%;
+    border: transparent;
+    background: linear-gradient(to top right,rgba(30, 255, 0, 0.753),rgba(75, 255, 59, 0.342));    
+}
+.clickPhoto:hover{
+    background: linear-gradient(to top right,rgba(75, 255, 59, 0.342),rgba(30, 255, 0, 0.753));
+    margin: 4px;
+    padding: 8px;
+}
+.rgb {
+    padding: 5px;
+    font-size: 15px;
+    margin-right: 220px;
+}

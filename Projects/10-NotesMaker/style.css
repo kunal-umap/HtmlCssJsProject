@@ -1,0 +1,19 @@
+.hed1 {
+    margin-top: 10px;
+    padding: 20px 20px 20px 0;
+}
+.left {
+    position: absolute;
+    right: 10px;
+    padding: 4px;
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+@media screen and (max-width: 991px) {
+    .left{
+        position: inherit;
+        padding: 0;
+    }
+}
