@@ -39,6 +39,8 @@ function paintToCanvas() {
         }
         if(galfa == true){
             ctx.globalAlpha = 0.07;
+        }else{
+            ctx.globalAlpha = 1;
         }
         pixels = greenScreen(pixels);
         ctx.putImageData(pixels, 0, 0);
