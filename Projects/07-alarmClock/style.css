@@ -5,7 +5,7 @@ body{
     padding-top: 20px;
     display: flex;
     align-items: center;
-    background: greenyellow;
+    background: rgb(124,119,119);
     flex: 1;
     flex-direction: column;
 }
