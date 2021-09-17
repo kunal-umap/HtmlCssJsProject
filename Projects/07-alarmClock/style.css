@@ -12,7 +12,7 @@ body{
 .clock{
     background: linear-gradient(to right bottom,rgb(90, 90, 255),skyblue);
     /* min-width: 200px; */
-    min-height: 400px;
+    min-height: 260px;
     flex: 1;
     max-width: 500px;
     aspect-ratio: 1 / 1;
