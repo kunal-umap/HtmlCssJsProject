@@ -12,7 +12,7 @@ body{
 .clock{
     background: linear-gradient(to right bottom,rgb(90, 90, 255),skyblue);
     /* min-width: 200px; */
-    min-height: 260px;
+    min-height: 400px;
     flex: 1;
     max-width: 500px;
     aspect-ratio: 1 / 1;
@@ -79,4 +79,9 @@ body{
     width: 80%;
     min-height: 20px;
     background: linear-gradient(rgba(240, 255, 240, 0.726),rgba(255, 255, 255, 0.274));
+}
+@media (max-width:460px) {
+    .clock{
+        min-height: 260px;
+    }
 }
