@@ -139,7 +139,7 @@ nav > ul > li > a:hover {
 }
 .godown a:hover {
     padding: 0 20px;
-    border: 2px solid grey;
+    border: 2.5px solid grey;
 }
 
  
@@ -164,7 +164,7 @@ nav > ul > li > a:hover {
     position: absolute;
     color: white;
     border-radius: 2px;
-    background-color: tomato;
+    background-color: slateblue;
     padding: 5px 10px;
     top: 0;
     left: 0;
