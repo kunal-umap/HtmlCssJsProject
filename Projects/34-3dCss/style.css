@@ -1,0 +1,237 @@
+:root {
+    --rotate:20s;
+    --jumpSpeed : 1.8s;
+    --mainColor : rgba(216, 106, 207, 0.575);
+}
+body {
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    font-size: 75px;
+    perspective: 10em;
+    perspective-origin: 50% calc(50% - 2em);
+}
+.scene {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: 👀 var(--rotate) infinite linear;
+}
+
+
+.ball {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: lightblue;
+    position: absolute;
+    left: -.5em;
+    bottom: 1em;
+    background-image: radial-gradient(
+        circle at top,
+        rgb(155, 144, 255),
+        #000
+    );
+    animation: 
+        🦘 var(--jumpSpeed) infinite ease-out,
+        👀 var(--rotate) infinite linear reverse;
+}
+.ballShadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+        #0007, #0000 50%
+    );
+    animation: 🕶 var(--jumpSpeed) infinite ease-in-out;
+}
+.cube {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    bottom: -1em;
+    left: -1em;
+    transform-style: preserve-3d;
+    animation: CA var(--jumpSpeed) infinite linear;
+}
+.cube1 {
+    width: 2em;
+    height: 1em;
+    position: absolute;
+    top: -4em;
+    left: -1em;
+    transform-style: preserve-3d;
+    animation: up var(--jumpSpeed) infinite linear;
+}
+
+.left,
+.right,
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainColor);
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.226) inset;
+}
+.front {
+    transform: translateZ(1em);
+}
+.right {
+    transform: rotateY(90deg) translateZ(1em);
+}
+.back {
+    transform: rotateY(180deg) translateZ(1em);
+}
+.left {
+    transform: rotateY(270deg) translateZ(1em);
+}
+
+.top {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background-color: var(--mainColor);
+    transform: translateY(-50%) rotateX(90deg);
+}
+.bottom {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background-color: #0007;
+    bottom: 0;
+    transform: translateY(50%) rotateX(90deg);
+    box-shadow: 0 0 4em black;
+}
+
+.ground {
+    position: absolute;
+    top: 1em;
+    transform: translate(-50% ,-50%) rotateX(90deg);
+    width: 15em;
+    height: 15em;
+    background-image: 
+    radial-gradient(#0000,#000 75%),
+    /* radial-gradient(#0000,#0000,#000,#000,#000), */
+    repeating-conic-gradient(
+        from 20deg,
+        lightblue 0deg 90deg,
+        rgb(13, 99, 1) 90deg 180deg
+        /* #111 0deg 90deg,
+        #222 90deg 180deg */
+    );
+    background-size:100%, 1em 1em;
+}
+.sdo {
+    box-shadow: 0 0 12em rgba(73, 73, 190, 0.486);
+}
+.about {
+    top: -8rem;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    transform-style: preserve-3d;
+    left: 14rem;
+    color: #fff;
+    animation: 👀 var(--rotate) infinite linear reverse,
+                glow 8s infinite;
+}
+.nd {
+    transform-style: preserve-3d;
+    padding: 0px;
+    position: absolute;
+    margin: 0px;
+    top: -8rem;
+    color: #fff;
+    animation: 👀 var(--rotate) infinite linear reverse,
+    glow 8s infinite;
+    left: -14rem;
+}
+@keyframes 👀 {
+    to {
+        transform: rotateY(360deg);
+    }
+    
+}
+@keyframes 🦘 {
+    0%,100%{
+        bottom: -0.5em;
+    }
+    50%{
+        bottom: 2.5em;
+        animation-timing-function: ease-in;
+    }
+
+}
+@keyframes 🕶 {
+    0%,6.5%,93.5%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(2);
+        opacity: 0.5;
+        animation-timing-function: ease-in;
+    }
+}
+@keyframes CA {
+    0%,100%{
+        height: .5em;
+    }
+    6.5%,93.5%{
+        height: 1em;
+    }
+}
+@keyframes up {
+
+    0%{
+        height: 1em;
+    }33%{
+        height: 1em;
+    }
+    45%{
+        height: 0.5em;
+
+    }55%{
+        height: 0.5em;
+    }
+    68%{
+        height: 1em;
+    }
+    100%{
+        height: 1em;
+    }
+}
+
+
+
+  @keyframes glow {
+    0%,100%{ text-shadow:0 0 2px red; }
+    25%{ text-shadow:0 0 2px orange; }
+    50%{ text-shadow:0 0 2px forestgreen; }
+    75%{ text-shadow:0 0 2px cyan; }
+  }
+  
+.about h1
+,.nd h1{
+    position: absolute;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-size: 50px;
+    line-height: 40px;
+    font-weight: 200;
+    letter-spacing: 4px;
+}
+
+h1:nth-child(2){ transform:translateZ(2px); }
+h1:nth-child(3){ transform:translateZ(4px);}
+h1:nth-child(4){ transform:translateZ(6px); }
+h1:nth-child(5){ transform:translateZ(8px); }
+h1:nth-child(6){ transform:translateZ(10px); }
+h1:nth-child(7){ transform:translateZ(12px); }
+h1:nth-child(8){ transform:translateZ(14px); }
+h1:nth-child(9){ transform:translateZ(16px); }
+h1:nth-child(10){ transform:translateZ(18px); }
